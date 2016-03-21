@@ -1,10 +1,10 @@
 var userAnswers = [];
 var correctAnswers = ['y', 'y', 'y', 'y', 'y', 'y', 7];
 var myQuestions = ['Are you ready for this? Yes or No', 'Do I look like a Pokemon Master?', 'Am I worthy enough to hold The Hammer of Thor? Yes or No.', 'Can my Kung Fu skills come in handy here? Yes or No.', 'Did you know I have a cute Shiba Inu named Yoshi?', 'Do you think this is the last add now? Yes or No.', 'What is my favorite number?'];
+var numTrack = 0;
 
 console.log('Welcome to my portfolio ^___^');
 alert('Oh, hello there.');
-var correctAnswers = 0;
 var totalAnswers = 0;
 var userName = prompt('Before we begin, what is your name?');
 console.log('enter your name');
@@ -15,7 +15,7 @@ var i = 0;
 
 function amCorrect() {
   if (userAnswers[i] === correctAnswers[i]) {
-    correctAnswers++;
+    numTrack++;
     alert('Sweet, dude!');
   } else if (userAnswers[i] !== 'y' && 'n') {
     alert('Please enter y or n!');
@@ -31,13 +31,36 @@ while (i < myQuestions.length - 1 && conLoop == true) {
   if (i === 4) {
     if (userAnswers[4] === correctAnswers[4]) {
       amCorrect();
-      i++;
     } else {
       conLoop = false;
     }
   }
   i++;
 }
+
+var favoriteNumber;
+var numberOfGuesses = 0;
+while (numberOfGuesses < 4 && favoriteNumber !== 7){
+  var favoriteNumber = parseInt(prompt(myQuestions[6]));
+  if (favoriteNumber < 7){
+    console.log('sorry that is too low');
+    alert('Sorry, too low.');
+    numberOfGuesses++;
+  } else if (favoriteNumber > 7){
+    console.log('sorry thats to high.');
+    alert('Sorry too high');
+    numberOfGuesses++;
+  } else if (favoriteNumber === 7){
+    console.log('good job!');
+    alert('Good Job!');
+    numberOfGuesses = 4;
+  } else {
+    console.log('you need to input a number');
+    alert('you need to input a number!');
+    numberOfGuesses++;
+  }
+}
+alert('you got ' + correctAnswers + ' out of ' + (totalAnswers + numberOfGuesses) + ' correct ');
 
 /*
 var readyForThis = prompt('Are you ready for this? Yes or No');
