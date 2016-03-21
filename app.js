@@ -1,3 +1,6 @@
+var userAnswers = [];
+var correctAnswers = ['']
+
 console.log('Welcome to my portfolio ^___^');
 alert('Oh, hello there.');
 var correctAnswers = 0;
