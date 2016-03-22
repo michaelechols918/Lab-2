@@ -150,20 +150,21 @@ function question5and6() {
 }
 question5and6();
 
+//Question 7 Guessing Game
 function guessingGame() {
   while (numberOfGuesses < 4 && favoriteNumber !== 7){
     favoriteNumber = parseInt(prompt('What is my favorite number?'));
     if (favoriteNumber < 7){
       console.log('sorry that is too low');
-      pTagSix.textContent = 'Sorry, too low.';
+      pTagSeven.textContent = 'Sorry, too low.';
       numberOfGuesses++;
     } else if (favoriteNumber > 7){
       console.log('sorry thats to high.');
-      pTagSix.textContent = 'Sorry, too high.';
+      pTagSeven.textContent = 'Sorry, too high.';
       numberOfGuesses++;
     } else if (favoriteNumber === 7){
       console.log('good job!');
-      pTagSix.textContent = 'Great job!';
+      pTagSeven.textContent = 'Great job!';
       numberOfGuesses = 4;
       correctAnswers++;
     } else {
