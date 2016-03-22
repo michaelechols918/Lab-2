@@ -165,7 +165,6 @@ function guessingGame() {
     } else if (favoriteNumber === 7){
       console.log('good job!');
       pTagSeven.textContent = 'Great job!';
-      numberOfGuesses = 4;
       correctAnswers++;
     } else {
       console.log('you need to input a number');
@@ -174,6 +173,6 @@ function guessingGame() {
     }
   }
   totalAnswers++;
-  alert('you got ' + correctAnswers + ' out of ' + totalAnswers + '  correct ');
+  alert('you got ' + correctAnswers + ' out of ' + totalAnswers + ' correct ');
 }
 guessingGame();
